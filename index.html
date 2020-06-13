@@ -8,6 +8,7 @@
 	<style>
 		.clicky { font-style: italic; text-decoration: none; display: block }
 		h2 { text-align: center }
+		.txstat { font-style: italic;  }
 	</style>
   </head>
   <body>
@@ -142,7 +143,7 @@
   	statusSocket.onmessage = function (event)
 	{
 	  data = JSON.parse(event.data);
-	  document.getElementById(data.freq).innerHTML = data.action;
+	  document.getElementById(data.freq).innerHTML = data.action + " (at " + data.datetime + ")";
   	}
 	</script>
      </body>
